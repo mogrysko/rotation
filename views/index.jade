@@ -1,0 +1,9 @@
+extends ./layout.jade
+
+block body
+  if isAuthenticated()
+    h1 Hello #{user.username}!
+  else
+    h1 Hello stranger…
+  
+  ng-view

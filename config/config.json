@@ -2,14 +2,14 @@
   "development": {
     "username": "postgres",
     "password": null,
-    "database": "fswd_2016_development",
+    "database": "rotation",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "username": "postgres",
     "password": null,
-    "database": "fswd_2016_test",
+    "database": "rotation",
     "host": "127.0.0.1",
     "dialect": "postgres",
     "logging": false,

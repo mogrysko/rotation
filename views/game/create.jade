@@ -1,0 +1,17 @@
+extends ../layout.jade
+
+block body
+  h1 Add a game to #{pitcher.firstname} #{pitcher.lastname}
+
+  form(novalidate method="POST" action="/pitcher/" + pitcher.id + "/game/success" name="gameForm")
+    .form-group
+      label(for="date") Game Date
+      input.form-control(type="date" required name="date" ng-model="date")
+      br
+      label(for="opponent") Opponent
+      input.form-control(type="text" required name="opponent" ng-model="opponent")
+      br
+      label(for="tableau") Game Pitch Tracker
+      input.form-control(type="text" required name="tableau" ng-model="tableau")
+      br
+    button.btn.btn-success(type="submit") Add

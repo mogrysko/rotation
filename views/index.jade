@@ -3,7 +3,11 @@ extends ./layout.jade
 block body
   if isAuthenticated()
     h1 Hello #{user.username}!
+    p
+      a.btn.btn-primary(href='/rotation/create') Create Rotation
   else
-    h1 Hello stranger…
+    h1 Log in to create a rotation
+    
+  include ./partials/rotations.jade
   
   ng-view

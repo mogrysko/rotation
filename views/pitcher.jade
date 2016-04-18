@@ -1,0 +1,19 @@
+extends ./layout.jade
+
+block body
+  if isAuthenticated()
+    p
+      a.btn.btn-primary(href='/pitcher/' + pitcher.id + '/game/create') Add a Game
+  else
+    p Log in to add a game
+  h4
+    //- #{pitcher.firstname} #{pitcher.lastname}
+  h4
+    = pitcher.firstname
+    | 
+    = pitcher.lastname 
+    |, #
+    = pitcher.number
+  img(src=pitcher.picture)
+
+  include ./partials/games.jade

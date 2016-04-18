@@ -1,0 +1,15 @@
+extends ../layout.jade
+
+block body
+  h1 Create a Rotation!
+
+  form(novalidate method="POST" action="/rotation/success" name="rotationForm")
+    .form-group(ng-class="{ 'has-error': !rotationForm.team.$valid }")
+      label(for="team") Team
+      input.form-control(type="text" required name="team" ng-model="team"
+        ng-model-options="{ debounce: 2000 }" unique-team)
+      br
+      div.alert.alert-warning(ng-hide="rotationForm.team.$valid")
+        p(ng-show="rotationForm.team.$error.required") Team name is required.
+        p(ng-show="rotationForm.team.$error.uniqueTeam") Team name must be unique.
+    button.btn.btn-success(type="submit" ng-disabled="!rotationForm.$valid") Create

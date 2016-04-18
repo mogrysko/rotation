@@ -1,0 +1,11 @@
+extends ./layout.jade
+
+block body
+  if isAuthenticated()
+    p
+      a.btn.btn-primary(href='/rotation/' + rotation.id + '/pitcher/create') Add a Pitcher
+  else
+    p Log in to add a pitcher
+  h3 #{rotation.team}
+
+  include ./partials/pitchers.jade

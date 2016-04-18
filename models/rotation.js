@@ -4,7 +4,10 @@ var bcrypt = require('bcrypt');
 
 module.exports = function(sequelize, DataTypes) {
   var Rotation = sequelize.define('Rotation', {
-    team: DataTypes.STRING
+    team: DataTypes.STRING,
+    teamcity: DataTypes.STRING,
+    teamname: DataTypes.STRING,
+    teamyear: DataTypes.STRING
   }, {
     classMethods: {
       associate: function(models) {

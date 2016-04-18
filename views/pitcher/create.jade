@@ -1,0 +1,20 @@
+extends ../layout.jade
+
+block body
+  h1 Add a pitcher to #{rotation.team}
+
+  form(novalidate method="POST" action="/rotation/" + rotation.id + "/pitcher/success" name="pitcherForm")
+    .form-group
+      label(for="firstname") Player First Name
+      input.form-control(type="text" required name="firstname" ng-model="firstname")
+      br
+      label(for="lastname") Player Last Name
+      input.form-control(type="text" required name="lastname" ng-model="lastname")
+      br
+      label(for="number") Player Number
+      input.form-control(type="text" required name="number" ng-model="number")
+      br
+      label(for="picture") Player Picture
+      input.form-control(type="text" required name="picture" ng-model="picture")
+      br
+    button.btn.btn-success(type="submit") Add

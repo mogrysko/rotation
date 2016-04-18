@@ -14,6 +14,20 @@ html
       integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
       crossorigin="anonymous")
     script(src='/browser-bundle.js')
+    meta(name='viewport', content='width=device-width')
+    script(src='https://online.tableau.com/javascripts/api/tableau-2.js')
+    script(type='text/javascript').
+      window.onload = function() {
+      var sheetDiv = document.getElementById("visualization");
+      var sheetURL = "https://public.tableau.com/views/Tillman4_14/Sheet1?:embed=y&:display_count=yes&:showTabs=y";
+      var sheetOptions = {
+        hideTab: true,
+        hideToolbar: true,
+        width: "450px",
+        height: "450px",
+      };
+      viz = new tableauSoftware.Viz(sheetDiv, sheetURL, sheetOptions);
+      };
     style
       | body { padding-top: 70px; }
     block title
@@ -23,7 +37,7 @@ html
     nav.navbar.navbar-default.navbar-fixed-top
       .container
         .navbar-header
-          a.navbar-brand(href="#") FSWD
+          a.navbar-brand(href="/") rotation
         .collapse.navbar-collapse.navbar-right
           if !isAuthenticated()
             ul.nav.navbar-nav

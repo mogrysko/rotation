@@ -1,0 +1,15 @@
+extends ./layout.jade
+
+
+
+block body
+  p  
+    strong= game.date
+    |,  
+    strong= game.opponent
+  //- p
+  //-   img(src=game.tableau)
+  if game.tableau
+    strong Pitches and Locations
+      #visualization
+      

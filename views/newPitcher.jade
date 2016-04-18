@@ -1,0 +1,12 @@
+extends ./layout.jade
+
+block body
+  h2 New Pitcher Added
+  p  
+    strong= pitcher.firstname
+    | 
+    strong= pitcher.lastname
+    |, 
+    strong= pitcher.number
+  p
+    img(src=pitcher.picture)

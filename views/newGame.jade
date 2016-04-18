@@ -1,0 +1,10 @@
+extends ./layout.jade
+
+block body
+  h2 New Game Added
+  p  
+    strong= game.date
+    |,  
+    strong= game.opponent
+  p
+    img(src=game.tableau)

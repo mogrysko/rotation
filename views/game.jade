@@ -3,6 +3,19 @@ extends ./layout.jade
 
 
 block body
+  script(src='https://online.tableau.com/javascripts/api/tableau-2.js')
+  script(type='text/javascript').
+    window.onload = function() {
+    var sheetDiv = document.getElementById("visualization");
+    var sheetURL = '#{game.tableau}';
+    var sheetOptions = {
+      hideTab: true,
+      hideToolbar: true,
+      width: "450px",
+      height: "450px",
+    };
+    viz = new tableauSoftware.Viz(sheetDiv, sheetURL, sheetOptions);
+    };
   p  
     strong= game.date
     |,  
@@ -11,5 +24,5 @@ block body
   //-   img(src=game.tableau)
   if game.tableau
     strong Pitches and Locations
-      #visualization
+    #visualization
       

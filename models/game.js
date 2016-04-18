@@ -6,6 +6,9 @@ module.exports = function(sequelize, DataTypes) {
   var Game = sequelize.define('Game', {
     date: DataTypes.DATE,
     opponent: DataTypes.STRING,
+    opponentcity: DataTypes.STRING,
+    opponentname: DataTypes.STRING,
+    homeaway: DataTypes.STRING,
     tableau: {
       type: DataTypes.STRING,
       isUrl: true,

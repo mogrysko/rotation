@@ -6,6 +6,6 @@ block body
       a.btn.btn-primary(href='/rotation/' + rotation.id + '/pitcher/create') Add a Pitcher
   else
     p Log in to add a pitcher
-  h3 #{rotation.team}
+  h3 #{rotation.teamyear} #{rotation.teamcity} #{rotation.teamname}
 
   include ./partials/pitchers.jade

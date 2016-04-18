@@ -4,12 +4,14 @@ block body
   h1 Create a Rotation!
 
   form(novalidate method="POST" action="/rotation/success" name="rotationForm")
-    .form-group(ng-class="{ 'has-error': !rotationForm.team.$valid }")
-      label(for="team") Team
-      input.form-control(type="text" required name="team" ng-model="team"
-        ng-model-options="{ debounce: 2000 }" unique-team)
+    .form-group
+      label(for="teamyear") Year
+      input.form-control(type="text" required name="teamyear" ng-model="teamyear")
       br
-      div.alert.alert-warning(ng-hide="rotationForm.team.$valid")
-        p(ng-show="rotationForm.team.$error.required") Team name is required.
-        p(ng-show="rotationForm.team.$error.uniqueTeam") Team name must be unique.
-    button.btn.btn-success(type="submit" ng-disabled="!rotationForm.$valid") Create
+      label(for="teamcity") Team City/State
+      input.form-control(type="text" required name="teamcity" ng-model="teamcity")
+      br
+      label(for="teamname") Team name
+      input.form-control(type="text" required name="teamname" ng-model="teamname")
+      br
+    button.btn.btn-success(type="submit") Create

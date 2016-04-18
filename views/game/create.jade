@@ -8,8 +8,14 @@ block body
       label(for="date") Game Date
       input.form-control(type="date" required name="date" ng-model="date")
       br
-      label(for="opponent") Opponent
-      input.form-control(type="text" required name="opponent" ng-model="opponent")
+      label(for="homeaway") Home/Away?
+      input.form-control(type="text" required name="homeaway" ng-model="homeaway")
+      br
+      label(for="opponentcity") Opponent City/State
+      input.form-control(type="text" required name="opponentcity" ng-model="opponentcity")
+      br
+      label(for="opponentname") Opponent City/State
+      input.form-control(type="text" required name="opponentname" ng-model="opponentname")
       br
       label(for="tableau") Game Pitch Tracker
       input.form-control(type="text" required name="tableau" ng-model="tableau")

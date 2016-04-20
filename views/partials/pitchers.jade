@@ -1,10 +1,8 @@
-h3 Pitchers
-
 each pitcher in pitchers
   .col-md-4(style='text-align:center;')
     .well
       h4
         a(href='/pitcher/' + pitcher.id) #{pitcher.firstname} #{pitcher.lastname} ##{pitcher.number}
       h6 #{pitcher.playercity} #{pitcher.playerteam} (#{pitcher.playeryear})
-      img(src=pitcher.picture)
+      img.img-thumbnail(src=pitcher.picture)
   

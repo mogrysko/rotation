@@ -17,6 +17,10 @@ module.exports = function(sequelize, DataTypes) {
     profile: {
       type: DataTypes.STRING,
       isUrl: true,
+    },
+    seasonstats: {
+      type: DataTypes.STRING,
+      isUrl: true,
     }
   }, {
     classMethods: {

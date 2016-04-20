@@ -2,14 +2,29 @@ extends ./layout.jade
 
 block body
   if isAuthenticated()
-    p
-      a.btn.btn-primary(href='/pitcher/' + pitcher.id + '/game/create') Add a Game
-      a.btn.btn-primary(href='/pitcher/' + pitcher.id + '/update') Edit #{pitcher.firstname} #{pitcher.lastname}
+    .well
+      .row
+        .col-md-1
+          img.img-thumbnail(src=pitcher.picture)
+        .col-md-11
+          h3 #{pitcher.firstname} #{pitcher.lastname} ##{pitcher.number}, #{pitcher.playercity} #{pitcher.playerteam}
+          h6 
+            a(href='/pitcher/' + pitcher.id + '/game/create') Add a Game
+            | |
+            a(href='/pitcher/' + pitcher.id + '/update') Edit #{pitcher.firstname} #{pitcher.lastname}'s Profile
+        .row
+          .col-md-4
+          .col-md-8
+            script(type='text/javascript', src='#{pitcher.seasonstats}')
+    .row
+      .col-md-3
+        include ./partials/games.jade
+      .col-md-9
+        h3 Stats
+        if !(pitcher.profile)
+          h5 Edit #{pitcher.firstname} #{pitcher.lastname}'s profile to add his stats.
+        else
+          script(type='text/javascript', src='#{pitcher.profile}')
+    
   else
     p Log in to add a game
-  h3 #{pitcher.firstname} #{pitcher.lastname}, ##{pitcher.number}
-  h5 #{pitcher.playeryear} #{pitcher.playercity} #{pitcher.playerteam}
-    
-  img(src=pitcher.picture)
-  script(type='text/javascript', src='#{pitcher.profile}')
-  include ./partials/games.jade

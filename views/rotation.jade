@@ -2,10 +2,10 @@ extends ./layout.jade
 
 block body
   if isAuthenticated()
+    h3 #{rotation.teamyear} #{rotation.teamcity} #{rotation.teamname}
     p
-      a.btn.btn-primary(href='/rotation/' + rotation.id + '/pitcher/create') Add a Pitcher
+      a(href='/rotation/' + rotation.id + '/pitcher/create') Add a Pitcher
+    .row
+      include ./partials/pitchers.jade
   else
-    p Log in to add a pitcher
-  h3 #{rotation.teamyear} #{rotation.teamcity} #{rotation.teamname}
-  .row
-    include ./partials/pitchers.jade
+    p Log in see your rotation

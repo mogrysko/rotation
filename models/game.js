@@ -12,6 +12,18 @@ module.exports = function(sequelize, DataTypes) {
     tableau: {
       type: DataTypes.STRING,
       isUrl: true,
+    },
+    tableau2: {
+      type: DataTypes.STRING,
+      isUrl: true,
+    },
+    tableau3: {
+      type: DataTypes.STRING,
+      isUrl: true,
+    },
+    tableau4: {
+      type: DataTypes.STRING,
+      isUrl: true,
     }
   }, {
     classMethods: {

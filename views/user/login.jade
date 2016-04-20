@@ -1,11 +1,13 @@
 extends ../layout.jade
 
 block body
-  form(name="login" method="POST" action="/user/login" ng-submit="vm.doLogin()")
-    .form-group
-      label Username
-      input.form-control(type="text" name="username" ng-model="vm.username")
-    .form-group
-      label Password
-      input.form-control(type="password" name="password" ng-model="vm.password")
-    button.btn.btn-default(type="submit") Login!
+  .well
+    h1 Log in
+    form(name="login" method="POST" action="/user/login" ng-submit="vm.doLogin()")
+      .form-group
+        label Username
+        input.form-control(type="text" name="username" ng-model="vm.username")
+      .form-group
+        label Password
+        input.form-control(type="password" name="password" ng-model="vm.password")
+      button.btn.btn-success(type="submit") Login!

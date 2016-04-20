@@ -1,32 +1,33 @@
 extends ../layout.jade
 
 block body
-  h1 Add a pitcher to #{rotation.team}
+  .well
+    h1 Add a pitcher to #{rotation.team}
 
-  form(novalidate method="POST" action="/rotation/" + rotation.id + "/pitcher/success" name="pitcherForm")
-    .form-group
-      label(for="firstname") Player First Name
-      input.form-control(type="text" required name="firstname" ng-model="firstname")
-      br
-      label(for="lastname") Player Last Name
-      input.form-control(type="text" required name="lastname" ng-model="lastname")
-      br
-      label(for="number") Player Number
-      input.form-control(type="text" required name="number" ng-model="number")
-      br
-      label(for="picture") Player Picture
-      input.form-control(type="text" required name="picture" ng-model="picture")
-      br
-      label(for="profile") BB-Ref Profile
-      input.form-control(type="text" required name="profile" ng-model="profile")
-      br
-      label(for="playercity") Player's Team City
-      input.form-control(type="text" required name="playercity" ng-model="playercity")
-      br
-      label(for="playerteam") Player's Team Name
-      input.form-control(type="text" required name="playerteam" ng-model="playerteam")
-      br
-      label(for="playeryear") Year
-      input.form-control(type="text" required name="playeryear" ng-model="playeryear")
-      br
-    button.btn.btn-success(type="submit") Add
+    form(novalidate method="POST" action="/rotation/" + rotation.id + "/pitcher/success" name="pitcherForm")
+      .form-group
+        label(for="firstname") Player First Name
+        input.form-control(type="text" required name="firstname" ng-model="firstname")
+        br
+        label(for="lastname") Player Last Name
+        input.form-control(type="text" required name="lastname" ng-model="lastname")
+        br
+        label(for="number") Player Number
+        input.form-control(type="text" required name="number" ng-model="number")
+        br
+        label(for="picture") Player Picture
+        input.form-control(type="text" required name="picture" ng-model="picture")
+        br
+        label(for="profile") BB-Ref Profile
+        input.form-control(type="text" required name="profile" ng-model="profile")
+        br
+        label(for="playercity") Player's Team City
+        input.form-control(type="text" required name="playercity" ng-model="playercity")
+        br
+        label(for="playerteam") Player's Team Name
+        input.form-control(type="text" required name="playerteam" ng-model="playerteam")
+        br
+        label(for="playeryear") Year
+        input.form-control(type="text" required name="playeryear" ng-model="playeryear")
+        br
+      button.btn.btn-success(type="submit") Add

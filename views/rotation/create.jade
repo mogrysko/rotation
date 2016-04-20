@@ -1,11 +1,12 @@
 extends ../layout.jade
 
 block body
-  h1 Create a Rotation!
+  .well
+    h1 Create a Rotation!
 
-  form(novalidate method="POST" action="/rotation/success" name="rotationForm")
-    .form-group
-      label(for="team") Team Name
-      input.form-control(type="text" required name="team" ng-model="team")
-      br
-    button.btn.btn-success(type="submit") Create
+    form(novalidate method="POST" action="/rotation/success" name="rotationForm")
+      .form-group
+        label(for="team") Team Name
+        input.form-control(type="text" required name="team" ng-model="team")
+        br
+      button.btn.btn-success(type="submit") Create

@@ -7,7 +7,14 @@ module.exports = function(sequelize, DataTypes) {
     firstname: DataTypes.STRING,
     lastname: DataTypes.STRING,
     number: DataTypes.STRING,
+    playercity: DataTypes.STRING,
+    playerteam: DataTypes.STRING,
+    playeryear: DataTypes.STRING,
     picture: {
+      type: DataTypes.STRING,
+      isUrl: true,
+    },
+    profile: {
       type: DataTypes.STRING,
       isUrl: true,
     }

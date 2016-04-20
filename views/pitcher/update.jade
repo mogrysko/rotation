@@ -1,9 +1,9 @@
 extends ../layout.jade
 
 block body
-  h1 Add a pitcher to #{rotation.team}
+  h1 Update #{pitcher.firstname} #{pitcher.lastname}
 
-  form(novalidate method="POST" action="/rotation/" + rotation.id + "/pitcher/success" name="pitcherForm")
+  form(novalidate method="POST" action="/pitcher/" + pitcher.id + "updated" name="pitcherForm")
     .form-group
       label(for="firstname") Player First Name
       input.form-control(type="text" required name="firstname" ng-model="firstname")
@@ -29,4 +29,4 @@ block body
       label(for="playeryear") Year
       input.form-control(type="text" required name="playeryear" ng-model="playeryear")
       br
-    button.btn.btn-success(type="submit") Add
+    button.btn.btn-success(type="submit") Update

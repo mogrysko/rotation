@@ -4,16 +4,12 @@ block body
   if isAuthenticated()
     p
       a.btn.btn-primary(href='/pitcher/' + pitcher.id + '/game/create') Add a Game
+      a.btn.btn-primary(href='/pitcher/' + pitcher.id + '/update') Edit #{pitcher.firstname} #{pitcher.lastname}
   else
     p Log in to add a game
-  h4
-    //- #{pitcher.firstname} #{pitcher.lastname}
-  h4
-    = pitcher.firstname
-    | 
-    = pitcher.lastname 
-    |, #
-    = pitcher.number
+  h3 #{pitcher.firstname} #{pitcher.lastname}, ##{pitcher.number}
+  h5 #{pitcher.playeryear} #{pitcher.playercity} #{pitcher.playerteam}
+    
   img(src=pitcher.picture)
-
+  script(type='text/javascript', src='#{pitcher.profile}')
   include ./partials/games.jade

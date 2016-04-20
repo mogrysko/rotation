@@ -2,9 +2,11 @@ extends ./layout.jade
 
 block body
   h2 New Game Added
-  p  
-    strong= game.date
-    |,  
-    strong= game.opponent
-  p
-    img(src=game.tableau)
+  h4 #{game.date.getMonth()+1}/#{game.date.getDate()+1}/#{game.date.getFullYear()}
+  h4 #{game.opponentcity} #{game.opponentname}
+  if (game.tableau)
+    p Game Tableau Links
+    p= game.tableau
+    p= game.tableau2
+    p= game.tableau3
+    p= game.tableau4

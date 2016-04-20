@@ -1,0 +1,15 @@
+extends ./layout.jade
+
+block body
+  h2 #{pitcher.firstname} #{pitcher.lastname} updated!
+  p  
+    strong= pitcher.firstname
+    | 
+    strong= pitcher.lastname
+    |, 
+    strong= pitcher.number
+  p= pitcher.picture
+  p= pitcher.profile
+  p= pitcher.tableau
+  
+    

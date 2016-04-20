@@ -5,13 +5,7 @@ block body
 
   form(novalidate method="POST" action="/rotation/success" name="rotationForm")
     .form-group
-      label(for="teamyear") Year
-      input.form-control(type="text" required name="teamyear" ng-model="teamyear")
-      br
-      label(for="teamcity") Team City/State
-      input.form-control(type="text" required name="teamcity" ng-model="teamcity")
-      br
-      label(for="teamname") Team name
-      input.form-control(type="text" required name="teamname" ng-model="teamname")
+      label(for="team") Team Name
+      input.form-control(type="text" required name="team" ng-model="team")
       br
     button.btn.btn-success(type="submit") Create

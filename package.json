@@ -1,13 +1,14 @@
 {
-  "name": "fswd-winter-2016-project-seed",
+  "name": "rotation",
   "version": "1.0.0",
-  "description": "Full Stack Web Development Winter 2016 Project Seed",
+  "description": "rotation project for fswd 2016",
   "main": "lib/server.js",
   "scripts": {
     "start": "webpack && node ./lib/server.js",
     "test": "gulp test"
+    "postinstall": "sequelize db:migrate && webpack"
   },
-  "author": "David Raynes",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.5.3",

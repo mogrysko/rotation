@@ -3,13 +3,31 @@ extends ./layout.jade
 block body
   h2 #{pitcher.firstname} #{pitcher.lastname} updated!
   p  
-    strong= pitcher.firstname
-    | 
-    strong= pitcher.lastname
-    |, 
-    strong= pitcher.number
-  p= pitcher.picture
-  p= pitcher.profile
-  p= pitcher.tableau
+    strong First Name: 
+    =pitcher.firstname
+  p
+    strong Last Name: 
+    =pitcher.lastname 
+  p
+    strong Number: 
+    =pitcher.number
+  p
+    strong Picture URL:
+    =pitcher.picture
+  p
+    strong Profile Link:
+    =pitcher.profile
+  p
+    strong Player City/State: 
+    =pitcher.playercity
+  p
+    strong Player Team Name: 
+    =pitcher.playerteam
+  p
+    strong Year: 
+    =pitcher.playeryear
+  p
+    strong Season Stats Link: 
+    =pitcher.seasonstats
   
-    
+  a(href="/pitcher/#{pitcher.id}") Return to #{pitcher.firstname} #{pitcher.lastname}'s Profile

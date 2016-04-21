@@ -7,6 +7,7 @@ block body
       .col-md-4(style='text-align:center;')
         if isAuthenticated()
           a.btn.btn-warning(href='/rotation/create') Create Rotation
+          if(rotation)
           h3#cover Your rotations
           include ./partials/rotations.jade  
           ng-view

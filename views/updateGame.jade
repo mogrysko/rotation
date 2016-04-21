@@ -1,0 +1,30 @@
+extends ./layout.jade
+
+block body
+  h2 Game updated!
+  p
+    strong Game date:
+    = game.date
+  p
+    strong Home/Away?
+    = game.homeaway
+  p
+    strong Opponent City:
+    = game.opponentcity
+  p
+    strong Opponent Team Name: 
+    = game.opponentname
+  p
+    strong Tableau Link 1: 
+    = game.tableau
+  p
+    strong Tableau Link 2: 
+    = game.tableau2
+  p
+    strong Tableau Link 3: 
+    = game.tableau3
+  p
+    strong Tableau Link 4: 
+    = game.tableau4
+  
+  a(href="/pitcher/#{game.pitcher_id}/game/#{game.id}") Return to game

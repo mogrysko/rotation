@@ -14,7 +14,7 @@ block body
             a(href='/pitcher/' + pitcher.id + '/update') Edit #{pitcher.firstname} #{pitcher.lastname}'s Profile
         .row
           .col-md-4
-          .col-md-8
+          .col-md-8.trythis
             script(type='text/javascript', src='#{pitcher.seasonstats}')
     .row
       .col-md-3
@@ -24,7 +24,8 @@ block body
         if !(pitcher.profile)
           h5 Edit #{pitcher.firstname} #{pitcher.lastname}'s profile to add his stats.
         else
-          script(type='text/javascript', src='#{pitcher.profile}')
+          .trythis
+            script(type='text/javascript', src='#{pitcher.profile}')
     
   else
     p Log in to add a game

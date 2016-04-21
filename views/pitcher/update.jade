@@ -3,30 +3,33 @@ extends ../layout.jade
 block body
   h1 Update #{pitcher.firstname} #{pitcher.lastname}
 
-  form(novalidate method="POST" action="/pitcher/" + pitcher.id + "updated" name="pitcherForm")
+  form(novalidate method="POST" action="/pitcher/#{pitcher.id}/updated" name="pitcherForm")
     .form-group
       label(for="firstname") Player First Name
-      input.form-control(type="text" required name="firstname" ng-model="firstname")
+      input.form-control(type="text" required name="firstname" value="#{pitcher.firstname}")
       br
       label(for="lastname") Player Last Name
-      input.form-control(type="text" required name="lastname" ng-model="lastname")
+      input.form-control(type="text" required name="lastname" value="#{pitcher.lastname}")
       br
       label(for="number") Player Number
-      input.form-control(type="text" required name="number" ng-model="number")
+      input.form-control(type="text" required name="number" value="#{pitcher.number}")
       br
       label(for="picture") Player Picture
-      input.form-control(type="text" required name="picture" ng-model="picture")
+      input.form-control(type="text" required name="picture" value="#{pitcher.picture}")
       br
       label(for="profile") BB-Ref Profile
-      input.form-control(type="text" required name="profile" ng-model="profile")
+      input.form-control(type="text" required name="profile" value="#{pitcher.profile}")
       br
       label(for="playercity") Player's Team City
-      input.form-control(type="text" required name="playercity" ng-model="playercity")
+      input.form-control(type="text" required name="playercity" value="#{pitcher.playercity}")
       br
       label(for="playerteam") Player's Team Name
-      input.form-control(type="text" required name="playerteam" ng-model="playerteam")
+      input.form-control(type="text" required name="playerteam" value="#{pitcher.playerteam}")
       br
       label(for="playeryear") Year
-      input.form-control(type="text" required name="playeryear" ng-model="playeryear")
+      input.form-control(type="text" required name="playeryear" value="#{pitcher.playeryear}")
+      br
+      label(for="seasonstats") Season Stats
+      input.form-control(type="text" required name="seasonstats" value="#{pitcher.seasonstats}")
       br
     button.btn.btn-success(type="submit") Update

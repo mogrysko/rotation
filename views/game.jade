@@ -21,15 +21,17 @@ block body
       width: "450px",
       height: "450px",
     };
-    ziv = new tableauSoftware.Viz(sheetDiv, sheetURL, sheetOptions);
-    rip = new tableauSoftware.Viz(sheetDiv2, sheetURL2, sheetOptions);
-    //- viz2 = new tableauSoftware.Viz(sheetDiv2, sheetURL2, sheetOptions);
+    viz = new tableauSoftware.Viz(sheetDiv, sheetURL, sheetOptions);
+    viz2 = new tableauSoftware.Viz(sheetDiv2, sheetURL2, sheetOptions);
+    viz3 = new tableauSoftware.Viz(sheetDiv3, sheetURL3, sheetOptions);
+    viz4 = new tableauSoftware.Viz(sheetDiv4, sheetURL4, sheetOptions);
     };
   .row
     .col-md-9
       #game-heading 
         h2 #{pitcher.firstname} #{pitcher.lastname} ##{pitcher.number}
         h3 #{pitcher.playercity} #{pitcher.playerteam} vs. #{game.opponentcity} #{game.opponentname} (#{game.date.getMonth()+1}/#{game.date.getDate()+1}/#{game.date.getFullYear()})
+        a(href="/game/#{game.id}/update") Edit Game
     .col-md-3
       #scoreboard
         h2 Result
@@ -37,23 +39,23 @@ block body
     .col-md-6
       if game.tableau  
         .well
-          h5 Pitches and Locations
+          h4 Pitch Type and Location
           #visualization
     .col-md-6
       if game.tableau2
         .well
-          h5 Pitches and Locations
+          h4 Pitch Result
           #another
   .row
     .col-md-6
       if game.tableau3 
         .well
-          h5 Pitches and Locations
+          h4 Pitches and Locations
           #another2
     .col-md-6
       if game.tableau4
         .well
-          h5 Pitches and Locations
+          h4 Pitches and Locations
           #another3
 
   script(type='text/javascript').

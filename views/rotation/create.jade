@@ -5,8 +5,10 @@ block body
     h1 Create a Rotation!
 
     form(novalidate method="POST" action="/rotation/success" name="rotationForm")
-      .form-group
+      .form-group(ng-class="{ 'has-error': !rotationForm.team.$valid }")
         label(for="team") Team Name
-        input.form-control(type="text" required name="team" ng-model="team")
+        input.form-control(type="text" required name="team")
         br
-      button.btn.btn-success(type="submit") Create
+        div.alert.alert-warning(ng-hide="rotationForm.team.$valid")
+          p(ng-show="rotationForm.team.$error.required") Username is required.
+      button.btn.btn-success(type="submit" ng-disabled="!rotationForm.$valid") Create

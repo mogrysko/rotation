@@ -1,0 +1,30 @@
+extends ../layout.jade
+
+block body
+  .well
+    h1 Update game
+
+    form(novalidate method="POST" action="/game/#{game.id}/updated" name="gameForm")
+      .form-group
+        label(for="homeaway") Home/Away?
+        input.form-control(type="text" required name="homeaway" value="#{game.homeaway}")
+        br
+        label(for="opponentcity") Opponent City/State
+        input.form-control(type="text" required name="opponentcity" value="#{game.opponentcity}")
+        br
+        label(for="opponentname") Opponent Team Name
+        input.form-control(type="text" required name="opponentname" value="#{game.opponentname}")
+        br
+        label(for="tableau") Tableau Diagram Link
+        input.form-control(type="text" required name="tableau" value="#{game.tableau}")
+        br
+        label(for="tableau2") Tableau Diagram Link
+        input.form-control(type="text" required name="tableau2" value="#{game.tableau2}")
+        br
+        label(for="tableau3") Tableau Diagram Link
+        input.form-control(type="text" required name="tableau3" value="#{game.tableau3}")
+        br
+        label(for="tableau4") Tableau Diagram Link
+        input.form-control(type="text" required name="tableau4" value="#{game.tableau4}")
+        br
+      button.btn.btn-success(type="submit") Update

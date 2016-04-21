@@ -5,7 +5,7 @@
   "main": "lib/server.js",
   "scripts": {
     "start": "webpack && node ./lib/server.js",
-    "test": "gulp test"
+    "test": "gulp test",
     "postinstall": "sequelize db:migrate && webpack"
   },
   "author": "",

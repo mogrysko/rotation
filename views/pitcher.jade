@@ -12,20 +12,25 @@ block body
             a(href='/pitcher/' + pitcher.id + '/game/create') Add a Game
             | |
             a(href='/pitcher/' + pitcher.id + '/update') Edit #{pitcher.firstname} #{pitcher.lastname}'s Profile
+            | |
+            a(href='/rotation/' + pitcher.rotation_id) Return to the Rotation
         .row
           .col-md-4
-          .col-md-8.trythis
+          .col-md-8
             script(type='text/javascript', src='#{pitcher.seasonstats}')
     .row
       .col-md-3
-        include ./partials/games.jade
+        h3 Games
+        if games.length > 0  
+          include ./partials/games.jade
+        else
+          h5 You haven't added any of #{pitcher.firstname} #{pitcher.lastname}'s Games.
       .col-md-9
         h3 Stats
         if !(pitcher.profile)
           h5 Edit #{pitcher.firstname} #{pitcher.lastname}'s profile to add his stats.
         else
-          .trythis
-            script(type='text/javascript', src='#{pitcher.profile}')
+          script(type='text/javascript', src='#{pitcher.profile}')
     
   else
     p Log in to add a game

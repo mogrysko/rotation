@@ -32,6 +32,8 @@ block body
         h2 #{pitcher.firstname} #{pitcher.lastname} ##{pitcher.number}
         h3 #{pitcher.playercity} #{pitcher.playerteam} vs. #{game.opponentcity} #{game.opponentname} (#{game.date.getMonth()+1}/#{game.date.getDate()+1}/#{game.date.getFullYear()})
         a(href="/game/#{game.id}/update") Edit Game
+        | | 
+        a(href="/pitcher/#{game.pitcher_id}") Return to Pitcher Profile
     .col-md-3
       #scoreboard
         h2 Result

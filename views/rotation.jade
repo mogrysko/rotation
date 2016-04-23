@@ -2,7 +2,7 @@ extends ./layout.jade
 
 block body
   if isAuthenticated()
-    h3 #{rotation.teamyear} #{rotation.teamcity} #{rotation.teamname}
+    h3 #{rotation.team}
     p
       a(href='/rotation/' + rotation.id + '/pitcher/create') Add a Pitcher
     .row

@@ -2,11 +2,18 @@ extends ./layout.jade
 
 block body
   h2 New Pitcher Added
-  p  
-    strong= pitcher.firstname
-    | 
-    strong= pitcher.lastname
-    |, 
-    strong= pitcher.number
+  a(href="/rotation/#{pitcher.rotation_id}") Return to rotation
+  | | 
+  a(href="/pitcher/#{pitcher.id}") View #{pitcher.firstname} #{pitcher.lastname}'s Profile
+  .well
+    .row 
+      .col-md-1
+        img.img-thumbnail(src=pitcher.picture)
+      .col-md-11
+        h3 #{pitcher.firstname} #{pitcher.lastname} ##{pitcher.number}, #{pitcher.playercity} #{pitcher.playerteam}
   p
-    img(src=pitcher.picture)
+    script(type='text/javascript', src='#{pitcher.seasonstats}')
+  p
+    script(type='text/javascript', src='#{pitcher.profile}')
+  
+    

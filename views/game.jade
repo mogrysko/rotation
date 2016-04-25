@@ -30,7 +30,8 @@ block body
     .col-md-9
       #game-heading 
         h2 #{pitcher.firstname} #{pitcher.lastname} ##{pitcher.number}
-        h3 #{pitcher.playercity} #{pitcher.playerteam} vs. #{game.opponentcity} #{game.opponentname} (#{game.date.getMonth()+1}/#{game.date.getDate()+1}/#{game.date.getFullYear()})
+        //- h3 #{pitcher.playercity} #{pitcher.playerteam} vs. #{game.opponentcity} #{game.opponentname} (#{game.date.getMonth()+1}/#{game.date.getDate()+1}/#{game.date.getFullYear()})
+        h3 #{pitcher.playercity} #{pitcher.playerteam} vs. #{game.opponentcity} #{game.opponentname} (#{game.date.getMonth()}/#{game.date.getDate()}/#{game.date.getFullYear()})
         a(href="/game/#{game.id}/update") Edit Game
         | | 
         a(href="/pitcher/#{game.pitcher_id}") Return to Pitcher Profile

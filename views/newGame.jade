@@ -5,7 +5,7 @@ block body
   a(href="/pitcher/#{game.pitcher_id}") Return to Pitcher Profile
   | | 
   a(href="/pitcher/#{game.pitcher_id}/game/#{game.id}") View Game Dashboard
-  h4 #{game.date.getMonth()+1}/#{game.date.getDate()+1}/#{game.date.getFullYear()}
+  h4 #{game.date.getMonth()}/#{game.date.getDate()}/#{game.date.getFullYear()}
   h4 #{game.opponentcity} #{game.opponentname}
   if (game.tableau)
     p Game Tableau Links

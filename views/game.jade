@@ -31,7 +31,7 @@ block body
       #game-heading 
         h2 #{pitcher.firstname} #{pitcher.lastname} ##{pitcher.number}
         //- h3 #{pitcher.playercity} #{pitcher.playerteam} vs. #{game.opponentcity} #{game.opponentname} (#{game.date.getMonth()+1}/#{game.date.getDate()+1}/#{game.date.getFullYear()})
-        h3 #{pitcher.playercity} #{pitcher.playerteam} vs. #{game.opponentcity} #{game.opponentname} (#{game.date.getMonth()}/#{game.date.getDate()}/#{game.date.getFullYear()})
+        h3 #{pitcher.playercity} #{pitcher.playerteam} vs. #{game.opponentcity} #{game.opponentname} (#{game.date.getMonth()+1}/#{game.date.getDate()}/#{game.date.getFullYear()})
         a(href="/game/#{game.id}/update") Edit Game
         | | 
         a(href="/pitcher/#{game.pitcher_id}") Return to Pitcher Profile
@@ -63,8 +63,7 @@ block body
 
   script(type='text/javascript').
     $(function() {
-      //- var month = '#{game.date.getMonth()+1}';
-      var month = '#{game.date.getMonth()}';
+      var month = '#{game.date.getMonth()+1}';
       month = ('0' + month).slice(-2);
       //- var day = '#{game.date.getDate()+1}';
       var day = '#{game.date.getDate()}';

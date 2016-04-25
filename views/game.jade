@@ -62,9 +62,11 @@ block body
 
   script(type='text/javascript').
     $(function() {
-      var month = '#{game.date.getMonth()+1}';
+      //- var month = '#{game.date.getMonth()+1}';
+      var month = '#{game.date.getMonth()}';
       month = ('0' + month).slice(-2);
-      var day = '#{game.date.getDate()+1}';
+      //- var day = '#{game.date.getDate()+1}';
+      var day = '#{game.date.getDate()}';
       day = ('0' + day).slice(-2);
       var year = '#{game.date.getFullYear()}';
       var scores = '/gameday/components.game.mlb.year_' + year + '.month_' + month + '.day_' + day + '.miniscoreboard.json';

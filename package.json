@@ -1,6 +1,9 @@
 {
   "name": "rotation",
   "version": "1.0.0",
+  "engines": {
+    "node": "4.4.7"
+  },
   "description": "rotation project for fswd 2016",
   "main": "lib/server.js",
   "scripts": {
